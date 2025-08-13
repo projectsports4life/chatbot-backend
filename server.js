@@ -22,9 +22,9 @@ app.post("/chat", async (req, res) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "openai/gpt-3.5-turbo",
+        model: "openai/gpt-oss-20b:free",
         messages: [
-          { role: "system", content: "You are a friendly chatbot." },
+          { role: "system", content: "You are a friendly chatbot that helps people with exercise and sports." },
           { role: "user", content: userMessage }
         ]
       })
@@ -40,3 +40,4 @@ app.post("/chat", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
