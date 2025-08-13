@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 // CORS: allow any origin (you can lock this down later)
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: "https://projectsports4life.github.io" }));
 app.use(express.json());
 
 // Health check (so hitting the root doesn't 404)
@@ -68,4 +68,5 @@ app.post("/chat", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+
 
