@@ -1,3 +1,6 @@
+console.log("OPENROUTER_API_KEY exists:", !!process.env.OPENROUTER_API_KEY);
+
+
 import express from "express";
 import fetch from "node-fetch";
 import cors from "cors";
@@ -68,5 +71,6 @@ app.post("/chat", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+
 
 
