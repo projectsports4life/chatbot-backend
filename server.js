@@ -41,7 +41,7 @@ app.post("/chat", async (req, res) => {
         "X-Title": "Chatbot Demo"
       },
       body: JSON.stringify({
-        model: "openai/gpt-oss-20b:free",
+        model: "deepseek/deepseek-r1:free",
         messages: [
           { role: "system", content: "You are a friendly chatbot." },
           { role: "user", content: userMessage }
@@ -71,6 +71,7 @@ app.post("/chat", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+
 
 
 
